@@ -1,0 +1,511 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+/* Header */
+.header {
+    background-color: #1F2233;        /* Dark background */
+    color: #E8EAF6;                   /* Light text color */
+    display: flex;
+    justify-content: center;          /* Center the content */
+    align-items: center;
+    padding: 20px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Center navigation links */
+  .nav-links {
+    display: flex;
+    gap: 50px;
+  }
+  
+  /* Navigation Links */
+.nav-links a {
+    color: #E8EAF6;                    /* Default link color */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  /* Updated hover effect with new color */
+  .nav-links a:hover {
+    color: #cdd4f7;                    /* Soft, light teal hover color */
+    transform: scale(1.1);             /* Slight zoom effect */
+  }
+  
+  /* Certifications Section */
+.certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between each card */
+    justify-content: center;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  text-align: left;  /* Center-align heading */
+  padding-left: 0;     /* Remove left padding */
+}
+
+.certification-card {
+  flex: 1 1 200px; /* Each card will have a minimum width of 200px */
+  max-width: 250px; /* Sets a maximum width for larger screens */
+  padding: 15px;
+  background-color: #292B3F;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s;
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .certification-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+  }
+  
+  .certification-card p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+  
+  .cert-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    color: #FFFFFF;
+    background-color: #534bb1;          /* Button color */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .cert-btn:hover {
+    background-color: #39337b;          /* Darker shade on hover */
+  }
+
+/* "Buy Me a Coffee" Section Styles */
+.support-section {
+  text-align: center;
+  background-color: #292b3f;  /* Darker background for the section */
+  color: #fff;  /* White text to contrast with the dark background */
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Stronger and more visible shadow */
+}
+
+.support-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.support-section p {
+  font-size: 18px;
+  color: #ddd;  /* Lighter text color for better readability */
+  margin-bottom: 25px;
+}
+
+.buy-me-coffee-button {
+  display: inline-block;
+  background-color: #e0a800;  /* Darker yellow for the button */
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-me-coffee-button:hover {
+  background-color: #d38f00;  /* Even darker yellow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .support-section {
+      padding: 30px;
+  }
+
+  .support-section h2 {
+      font-size: 20px;
+  }
+
+  .support-section p {
+      font-size: 16px;
+  }
+
+  .buy-me-coffee-button {
+      font-size: 16px;
+  }
+}
+
+
+
+  @media (min-width: 600px) {
+    .certification-card {
+      flex: 1 1 150px; /* More cards per row on medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .certification-card {
+      flex: 1 1 200px; /* More cards per row on large screens */
+    }
+  }
+  
+  
+  /* Footer */
+  .footer {
+    background-color: #181A29;      /* Deep navy background */
+    color: #B0BEC5;                 /* Soft gray text */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: #B0BEC5;                 /* Default gray icon color */
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #4DD0E1;                 /* Teal color on hover */
+  }
+  
+
+body {
+  background-color: #181A29; /* Dark purple background */
+  color: #EDEDED;            /* Light gray text */
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1, h2 {
+  color: #FFFFFF;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #B0B0B0;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button-group button {
+  padding: 12px 24px;
+  margin: 5px;
+  background-color: #6C63FF; /* Solid purple color */
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+}
+
+.button-group button:hover {
+  background-color: #534BB1; /* Slightly darker purple on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* Project Cards */
+.project-card {
+  background-color: #292B3F; /* Darker purple-gray */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 15px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #D1D1D1;
+}
+
+.project-card h3 {
+  color: #E0E0E0;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills Section */
+.skills-list {
+  display: flex;
+  gap: 15px; /* Space between skill cards */
+  justify-content: center;
+  flex-wrap: nowrap; /* Allow wrapping to a new line on smaller screens */
+}
+
+.skill {
+  width: 100px; /* Set a smaller default width */
+  padding: 15px;
+  background-color: #292B3F;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.skill i {
+  font-size: 1.8em; /* Slightly smaller icon size */
+  margin-bottom: 2px;
+}
+
+.skill p {
+  margin: 0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a.skill {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (min-width: 768px) {
+  .skill {
+    width: 110px;
+    padding: 18px;
+  }
+
+  .skill i {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill {
+    width: 120px;
+    padding: 20px;
+  }
+
+  .skill i {
+    font-size: 2.2em;
+  }
+}
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    /* Container width for mobile */
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+
+  
+    /* Navigation */
+    .nav-links {
+      display: none; /* Hide on mobile */
+    }
+  
+    /* Hamburger icon for mobile */
+    .header {
+      justify-content: space-between;
+    }
+  
+    .menu-icon {
+      display: inline-block;
+      font-size: 1.5rem;
+      color: #E8EAF6;
+      cursor: pointer;
+    }
+  
+   /* Responsive Media Queries */
+@media (max-width: 768px) {
+    /* General Container for Mobile */
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    /* Navigation Links - Font and Spacing Adjustments */
+    .nav-links {
+      display: flex;              /* Ensure links are displayed */
+      justify-content: space-around; /* Spread links across the screen */
+      gap: 15px;                  /* Reduced gap */
+    }
+  
+    .nav-links a {
+      font-size: 0.9rem;          /* Smaller font size for mobile */
+      padding: 8px 0;             /* Adjust padding for links */
+    }
+  
+    /* Hero Section */
+    .hero h1 {
+      font-size: 2rem;            /* Adjusted title size */
+    }
+  
+    .hero p {
+      font-size: 1rem;            /* Adjusted paragraph size */
+    }
+  
+    /* Button Group */
+    .button-group button {
+      padding: 10px 20px;         /* Smaller padding */
+      font-size: 0.85rem;         /* Smaller font size */
+    }
+  
+    /* Project Cards */
+    .project-card {
+      width: 100%;                /* Full width on mobile */
+      padding: 15px;              /* Reduced padding */
+      margin: 10px 0;             /* Smaller margin */
+    }
+  
+    /* Skills Section */
+    .skills-list {
+      flex-direction: column;
+    }
+  
+    .skill {
+      width: 100%;                /* Full width for each skill */
+      margin-bottom: 15px;        /* Space between each */
+    }
+  
+    /* Certifications Section */
+    .certification-card {
+      width: 100%;                /* Full width on mobile */
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    /* General Container for Mobile */
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    /* Center the navigation links on smaller screens */
+    .nav-links {
+      display: flex;                /* Keep links as flex items */
+      justify-content: center;      /* Center the links */
+      gap: 15px;                    /* Spacing between links */
+      width: 100%;                  /* Take full width */
+    }
+  
+    .nav-links a {
+      font-size: 0.9rem;            /* Smaller font size for mobile */
+      padding: 8px 0;               /* Adjust padding for links */
+    }
+  
+    /* Hero Section */
+    .hero h1 {
+      font-size: 2rem;              /* Adjusted title size */
+    }
+  
+    .hero p {
+      font-size: 1rem;              /* Adjusted paragraph size */
+    }
+  
+    /* Button Group */
+    .button-group button {
+      padding: 10px 20px;           /* Smaller padding */
+      font-size: 0.85rem;           /* Smaller font size */
+    }
+  
+    /* Project Cards */
+    .project-card {
+      width: 100%;                  /* Full width on mobile */
+      padding: 15px;                /* Reduced padding */
+      margin: 10px 0;               /* Smaller margin */
+    }
+  
+    /* Skills Section */
+    .skills-list {
+      flex-direction: column;
+    }
+  
+    .skill {
+      width: 100%;                  /* Full width for each skill */
+      margin-bottom: 15px;          /* Space between each */
+    }
+  
+    /* Certifications Section */
+    .certification-card {
+      width: 100%;                  /* Full width on mobile */
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further Font Adjustments for Smaller Screens */
+    h1, h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  
+    .button-group button {
+      padding: 8px 18px;            /* Smaller padding */
+      font-size: 0.8rem;            /* Smaller font */
+    }
+  
+    /* Header Spacing */
+    .header {
+      padding: 10px 20px;
+    }
+  }
+}

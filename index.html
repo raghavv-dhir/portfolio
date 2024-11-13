@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- For Icons -->
+</head>
+<body>
+     <!-- Header -->
+  <header class="header">
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <!-- Header Section -->
+  <header>
+    <div class="container hero">
+      <h1>Hello, I'm Raghav Dhir <span class="wave">👋</span></h1>
+      <p>Aspiring B.Tech-CSE student | Passionate about Java, Data-Structures & building projects.</p>
+      <div class="button-group">
+        <button onclick="scrollToSection('projects')">My Work</button>
+        <button onclick="seeResume()">Resume</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>A well-organized, and goal-oriented under
+      graduate possessing excellent communication 
+      and problem-solving skills with a flair to explore 
+      suitable 
+      avenues 
+      in 
+      Computer Science 
+      Engineering while developing projects with 
+      efficiency and quality. </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Description of the project and technologies used.</p>
+      <div class="button-group">
+        <button onclick="viewProject()">View Code</button>
+        <button onclick="liveDemo()">Live Demo</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill java">
+        <a href="https://docs.oracle.com/javase/8/docs/" target="_blank" class="skill java">
+          <i class="fa-brands fa-java"></i>
+          <p>Java</p>
+        </a>
+      </div>
+      <div class="skill mysql">
+        <a href="https://dev.mysql.com/doc/" target="_blank" class="skill mysql">
+          <i class="fa-solid fa-database"></i>
+          <p>MySQL</p>
+        </a>
+      </div>
+      <div class="skill javascript">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill javascript">
+          <i class="fa-brands fa-js"></i>
+          <p>JavaScript</p>
+        </a>
+      </div>
+      <div class="skill html">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="skill html">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </a>
+      </div>
+      <div class="skill css">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="skill css">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </a>
+      </div>
+      <div class="skill mongodb">
+        <a href="https://www.mongodb.com/docs/" target="_blank" class="skill mongodb">
+          <i class="fa-solid fa-server" style="color: #ffffff;"></i>
+          <p>MongoDB</p>
+        </a>
+      </div>
+      <!-- Add more skills as needed -->
+    </div>
+  </section>
+  
+  <!-- Certifications Section -->
+  <section id="certifications" class="container">
+    <h2>Certifications</h2>
+    <div class="certifications-list">
+      <div class="certification-card">
+        <h3>Smart India Hackathon- SIH 2023</h3>
+        <p>Issued by: Smart India Hackathon</p>
+        <p>Date: September 2023</p>
+        <a href="images/sih.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>Java (Basic)</h3>
+        <p>Issued by: HackerRank</p>
+        <p>Date: September 2024</p>
+        <a href="images/java basic.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>HTML Certification Test - Youtube Course</h3>
+        <p>Issued by: KG Coding</p>
+        <p>Date: March 2024</p>
+        <a href="images/html kg.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>Problem Solving (Basic)</h3>
+        <p>Issued by: HackerRank</p>
+        <p>Date: September 2024</p>
+        <a href="images/problem solving.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>CSS Certification Test - Youtube Course</h3>
+        <p>Issued by: KG Coding</p>
+        <p>Date: March 2024</p>
+        <a href="images/css kg.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>SQL (Basic)</h3>
+        <p>Issued by: HackerRank</p>
+        <p>Date: September 2024</p>
+        <a href="images/sql basic.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>SQL for Beginners- Alison</h3>
+        <p>Issued by: Alison</p>
+        <p>Date: August 2024</p>
+        <a href="images/alison.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>AWS Academy Graduate- AWS Academy Cloud Operations </h3>
+        <p>Issued by: Amazon Web Services (AWS)</p>
+        <p>Date: August 2024</p>
+        <a href="images/aws.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>Phoenix Club Coding Competition </h3>
+        <p>Issued by: Smart India Hackathon</p>
+        <p>Date: August 2024</p>
+        <a href="images/pheonix.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>Azure Skynet- Certificate of Internship </h3>
+        <p>Issued by: Azure Skynet Solutions Pvt. Ltd</p>
+        <p>Date: August 2024</p>
+        <a href="images/intern.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <div class="certification-card">
+        <h3>Java Certification Test - Youtube Course</h3>
+        <p>Issued by: KG Coding</p>
+        <p>Date: August 2024</p>
+        <a href="images/java kg.jpg" target="_blank" class="cert-btn">View Certificate</a>
+      </div>
+      <!-- Add more certifications as needed -->
+    </div>
+  </section>
+
+  <!-- "Buy Me a Coffee" Section -->
+  <section class="support-section">
+    <h2>Enjoy this project? You can support me by buying a coffee!</h2>
+    <p>If you found this helpful, consider buying me a coffee to keep me going!</p>
+    <a href="https://razorpay.me/@raghavdhir" target="_blank" class="buy-me-coffee-button">
+        Buy me a coffee ☕
+    </a>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </footer>
+</body>
+
+  <script src="script.js" defer></script>
+  
+</body>
+</html>
