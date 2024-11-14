@@ -15,3 +15,8 @@ function scrollToSection(id) {
   function liveDemo() {
     alert("Live demo feature coming soon!");
   }
+  // Set current year in footer
+document.addEventListener("DOMContentLoaded", function() {
+  const yearSpan = document.getElementById("year");
+  yearSpan.textContent = new Date().getFullYear();
+});

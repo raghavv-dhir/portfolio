@@ -128,8 +128,8 @@
 
 .buy-me-coffee-button {
   display: inline-block;
-  background-color: #e0a800;  /* Darker yellow for the button */
-  color: #000;
+  background-color: #6C63FF;  /* Darker yellow for the button */
+  color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
@@ -139,7 +139,9 @@
 }
 
 .buy-me-coffee-button:hover {
-  background-color: #d38f00;  /* Even darker yellow on hover */
+  background-color: #534BB1; /* Slightly darker purple on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
 }
 
 /* Responsive Design */
@@ -318,6 +320,15 @@ a.skill {
   text-decoration: none;
   color: inherit;
 }
+
+/* Skills Icons Colors */
+.skill .fa-java { color: #5382A1; }     /* Java */
+.skill .fa-database { color: #00758F; } /* MySQL */
+.skill .fa-js { color: #F0DB4F; }       /* JavaScript */
+.skill .fa-html5 { color: #E34F26; }    /* HTML */
+.skill .fa-css3-alt { color: #1572B6; } /* CSS */
+.skill .fa-server { color: #00758F; }   /* MongoDB */
+
 
 /* Responsive adjustments for different screen sizes */
 @media (min-width: 768px) {
