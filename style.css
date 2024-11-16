@@ -20,6 +20,22 @@
     top: 0;
     z-index: 1000;
   }
+
+  @keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave-animation 1.5s ease-in-out infinite;
+    transform-origin: 70% 70%; /* Adjust for realistic pivot point */
+  }
+  
+  
   #loading-spinner {
     position: fixed;
     top: 0;
@@ -73,7 +89,7 @@
     text-decoration: underline;
 }
 
- .nav-links a:hover {
+  .nav-links a:hover {
     color: #ffffff;                    
     transform: scale(1.1);            
   }
@@ -85,11 +101,46 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.about-box {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 15px; /* Smooth corners */
+  padding: 20px; /* Inner spacing */
+  margin-top: 20px; /* Space between heading and content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  color: #FFFFFF; /* Text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+.about-box p {
+  font-size: 1.1rem; /* Slightly larger font size for better readability */
+  color: #EDEDED; /* Subtle text color */
+  line-height: 1.6; /* Improved line spacing */
+  margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 768px) {
+  .about-box {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .about-box p {
+    font-size: 1rem; /* Slightly smaller text size */
+  }
+}
+
+
 .certifications-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; 
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 20px; /* Space between cards */
+  justify-content: center;
 }
 
 .container h2 {
@@ -101,25 +152,26 @@
 }
 
 .certification-card {
-  flex: 1 1 200px; 
-  max-width: 250px; 
-  padding: 15px;
-  background-color: #292B3F;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 15px; /* Smooth corners */
+  padding: 20px; /* Padding for content spacing */
   text-align: center;
-  color: #fff;
-  transition: transform 0.3s;
+  color: #FFFFFF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   }
   
   .certification-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
   }
   
   .certification-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 10px;
-    color: #FFFFFF;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #E0E0E0;
   }
   
   .certification-card p {
@@ -128,64 +180,79 @@
   }
   
   .cert-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    color: #FFFFFF;
-    background-color: #534bb1;         
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  background-color: rgba(108, 99, 255, 0.8); /* Semi-transparent button */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
   }
   
   .cert-btn:hover {
-    background-color: #39337b;        
+  background-color: rgba(83, 75, 177, 0.9); /* Darker on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);     
+  }
+
+  @media (max-width: 768px) {
+    .certification-card {
+      width: 100%; /* Full-width for small screens */
+      margin-bottom: 20px;
+    }
   }
 
 
 .support-section {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 15px; /* Smooth corners */
+  padding: 40px; /* Spacing inside the section */
+  margin: 20px auto; /* Center the section */
+  max-width: 600px; /* Limit width for better design */
   text-align: center;
-  background-color: #292b3f; 
-  color: #fff; 
-  padding: 40px;
-  margin: 20px auto;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .support-section:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 .support-section h2 {
   font-size: 24px;
   margin-bottom: 15px;
+  color: #EDEDED; /* Highlighted text color */
 }
 
 .support-section p {
   font-size: 18px;
-  color: #ddd; 
+  color: #B0B0B0; /* Subtle text color */
   margin-bottom: 25px;
 }
 
 .buy-me-coffee-button {
   display: inline-block;
-  background-color: #6C63FF;
-  color: #fff;
+  background: rgba(108, 99, 255, 0.8); /* Semi-transparent button */
+  color: #FFFFFF;
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .buy-me-coffee-button:hover {
-  background-color: #534BB1;
-  transform: translateY(-3px); 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  background: rgba(83, 75, 177, 0.9); /* Darker background on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 /* Responsive Design */
@@ -314,12 +381,15 @@ p {
 
 
 .project-card {
-  background-color: #292B3F;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 15px; /* Smooth corners */
   margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for definition */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #D1D1D1;
+  color: #EDEDED;
 }
 
 .project-card h3 {
@@ -330,7 +400,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
 }
 
 
@@ -342,32 +412,50 @@ p {
 }
 
 .skill {
-  padding: 15px;
-  background-color: #292B3F;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+  border-radius: 15px; /* Smooth rounded corners */
+  padding: 20px;
+  width: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: #fff;
-  transition: transform 0.3s;
+  color: #FFFFFF;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
 }
 
 .skill i {
-  font-size: 1.8em;
-  margin-bottom: 2px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #FFFFFF; /* Ensure icons are clearly visible */
 }
 
 .skill p {
   margin: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
   text-decoration: none;
-  font-weight: 500;
 }
 
-a.skill {
-  text-decoration: none;
-  color: inherit;
+.skills-list a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Maintain text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.skills-list a:hover {
+  transform: translateY(-5px); /* Subtle lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
 
 
 .skill .fa-java { color: #5382A1; }    
@@ -379,34 +467,19 @@ a.skill {
 
 
 
-@media (min-width: 768px) {
-  .skill {
-    width: 110px;
-    padding: 18px;
-  }
-
-  .skill i {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 1024px) {
-  .skill {
-    width: 120px;
-    padding: 20px;
-  }
-
-  .skill i {
-    font-size: 2.2em;
-  }
-}
-
 @media (max-width: 768px) {
-    
-    .container {
-      width: 100%;
-      padding: 10px;
-    }
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .skill {
+    width: 80%; /* Full width for small screens */
+    padding: 15px;
+  }
+}
+
 
   
    
@@ -486,7 +559,7 @@ a.skill {
   
 
     .certification-card {
-      width: 100%;                /
+      width: 100%;                
       padding: 15px;
       margin-bottom: 15px;
     }
@@ -569,4 +642,3 @@ a.skill {
       padding: 10px 20px;
     }
   }
-}
