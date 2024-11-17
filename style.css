@@ -67,7 +67,7 @@
 
 .nav-links {
   display: flex; /* Flex layout for nav links */
-  gap: 40px; /* Space between links */
+  gap: 20px; /* Reduced space between links */
   justify-content: center; /* Center the nav links */
   align-items: center; /* Vertically align the links */
   }
@@ -79,14 +79,13 @@
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s, transform 0.3s;
-  margin: 0 20px; /* Adjust the value for desired spacing */
-  font-size: 1rem;
+  margin: 0 10px; /* Reduced margin for closer links */
   }
 
   .nav-links a.active {
-  color: #FFFFFF; /* Highlight active link */
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow for emphasis */
+    color: #FFFFFF; /* Highlight active link */
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow for emphasis */
 }
 
   .nav-links a:hover {
@@ -95,12 +94,12 @@
   }
 
   .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 40px;
-    width: 100%;
-    background-color: rgba(31, 34, 51, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  width: 100%;
+  background-color: rgba(31, 34, 51, 0.8);
 }
 
 .about-box {
@@ -224,7 +223,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
   border-radius: 15px; /* Smooth corners */
   padding: 40px; /* Spacing inside the section */
-  margin: 20px auto; /* Center the section */
+  margin: 20px; /* Center the section */
   max-width: 600px; /* Limit width for better design */
   text-align: center;
   color: #FFFFFF; /* Text color */
@@ -253,7 +252,7 @@
   display: inline-block;
   background: rgba(108, 99, 255, 0.8); /* Semi-transparent button */
   color: #FFFFFF;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-size: 18px;
@@ -408,7 +407,7 @@ p {
 .project p {
   font-size: 1.1rem; /* Slightly larger font size for better readability */
   color: #EDEDED; /* Subtle text color */
-  line-height: 1.6; /* Improved line spacing */
+  line-height: 1.7; /* Improved line spacing */
   margin: 0; /* Remove default margin */
 }
 
@@ -425,7 +424,7 @@ p {
 .project-card h3 {
   color: #E0E0E0;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .project-card:hover {
