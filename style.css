@@ -9,16 +9,14 @@
 
 
 .header {
-    background-color: #1F2233;        
-    color: #E8EAF6;                   
-    display: flex;
-    justify-content: center;          
-    align-items: center;
-    padding: 20px 50px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  background-color: #1F2233; /* Header background */
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: center; /* Center all child elements horizontally */
+  align-items: center; /* Center all child elements vertically */
+  padding: 20px 50px; /* Add padding around the header */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure header stays on top */
   }
 
   @keyframes wave-animation {
@@ -67,38 +65,42 @@
     }
 }
 
-  
-
-  .nav-links {
-    display: flex;
-    gap: 40px;
+.nav-links {
+  display: flex; /* Flex layout for nav links */
+  gap: 40px; /* Space between links */
+  justify-content: center; /* Center the nav links */
+  align-items: center; /* Vertically align the links */
   }
   
 
 .nav-links a {
-    color: #E8EAF6;                   
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s, transform 0.3s;
+  color: #E8EAF6;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+  margin: 0 20px; /* Adjust the value for desired spacing */
+  font-size: 1rem;
   }
 
   .nav-links a.active {
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: underline;
+  color: #FFFFFF; /* Highlight active link */
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Subtle glow for emphasis */
 }
 
   .nav-links a:hover {
-    color: #ffffff;                    
-    transform: scale(1.1);            
+  color: #FFFFFF;
+  transform: scale(1.1);            
   }
 
   .header {
-    backdrop-filter: blur(10px);
-    background-color: rgba(31, 34, 51, 0.8); 
-    transition: background-color 0.3s, backdrop-filter 0.3s; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    width: 100%;
+    background-color: rgba(31, 34, 51, 0.8);
 }
 
 .about-box {
@@ -114,8 +116,8 @@
 }
 
 .about-box:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+  transform: translateY(-3px); /* Gentle lift effect */
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
 }
 
 .about-box p {
@@ -156,16 +158,27 @@
   backdrop-filter: blur(10px); /* Frosted glass effect */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
   border-radius: 15px; /* Smooth corners */
-  padding: 20px; /* Padding for content spacing */
+  padding: 20px; /* Inner spacing */
   text-align: center;
   color: #FFFFFF;
+  overflow: hidden; /* Ensure image stays within bounds */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   }
+
+  .certification-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+  }
+
+  .certification-card:hover img {
+    transform: scale(1.05); /* Subtle zoom in */
+  }
   
   .certification-card:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
   }
   
   .certification-card h3 {
@@ -220,8 +233,8 @@
 }
 
 .support-section:hover {
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  transform: translateY(-3px); /* Gentle lift effect */
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
 }
 
 .support-section h2 {
@@ -252,7 +265,6 @@
 .buy-me-coffee-button:hover {
   background: rgba(83, 75, 177, 0.9); /* Darker background on hover */
   transform: translateY(-3px); /* Lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
 }
 
 /* Responsive Design */
@@ -381,15 +393,33 @@ p {
 
 
 .project-card {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
   backdrop-filter: blur(10px); /* Frosted glass effect */
   padding: 20px;
-  border-radius: 15px; /* Smooth corners */
+  border-radius: 8px;
   margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for definition */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #EDEDED;
+  color: #D1D1D1;
+  overflow: hidden; /* Ensure image does not overflow */
+  position: relative; /* Required for child image positioning */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial shadow */
+}
+
+.project p {
+  font-size: 1.1rem; /* Slightly larger font size for better readability */
+  color: #EDEDED; /* Subtle text color */
+  line-height: 1.6; /* Improved line spacing */
+  margin: 0; /* Remove default margin */
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+.project-card:hover img {
+  transform: scale(1.05); /* Subtle zoom in */
 }
 
 .project-card h3 {
@@ -400,49 +430,46 @@ p {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.5); /* Subtle glow */
 }
 
 
 .skills-list {
-  display: flex;
-  gap: 15px; 
-  justify-content: center;
-  flex-wrap: nowrap;
+  display: grid; /* Use Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust number of columns based on width */
+  gap: 15px; /* Space between skill cards */
+  justify-items: center; /* Center align skills within their grid cells */
+  padding: 20px 0; /* Add padding to the section */
 }
 
 .skill {
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
   backdrop-filter: blur(10px); /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
-  border-radius: 15px; /* Smooth rounded corners */
-  padding: 20px;
-  width: 110px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px;
+  width: 100px; /* Fixed width for consistent size */
   text-align: center;
   color: #FFFFFF;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 .skill:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+  transform: translateY(-3px); /* Gentle lift effect */
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
 }
 
 .skill i {
   font-size: 2rem;
-  margin-bottom: 10px;
-  color: #FFFFFF; /* Ensure icons are clearly visible */
+  margin-bottom: 8px;
+  color: inherit;
 }
 
 .skill p {
   margin: 0;
   font-weight: bold;
   font-size: 0.9rem;
-  text-decoration: none;
 }
 
 .skills-list a {
@@ -467,29 +494,21 @@ p {
 
 
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-  .skills-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
   .skill {
-    width: 80%; /* Full width for small screens */
-    padding: 15px;
+    width: calc(50% - 20px); /* Allow 2 skills per row on medium screens */
   }
 }
 
+@media (max-width: 480px) {
+  .skill {
+    width: calc(100% - 20px); /* Allow 1 skill per row on very small screens */
+  }
+}
 
-  
-   
-    .nav-links {
-      display: none;
-    }
-  
-  
-    .header {
-      justify-content: space-between;
+  .header {
+      justify-content: center;
     }
   
     .menu-icon {
@@ -542,8 +561,8 @@ p {
     }
 
     .project-card:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      transform: translateY(-10px) scale(1);
+      box-shadow: 0 4px 12px rgba(108, 99, 255, 0.1); /* Subtle glow */
   }
   
   

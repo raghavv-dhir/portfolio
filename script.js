@@ -35,24 +35,43 @@ document.addEventListener("scroll", function() {
       header.style.backgroundColor = "rgba(31, 34, 51, 1)";
   }
 });
+// Highlight the active section in the navbar
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-links a");
 
   let currentSection = "";
 
-  sections.forEach(section => {
-      const sectionTop = section.offsetTop - 60; // Adjust for sticky header
-      if (pageYOffset >= sectionTop) {
-          currentSection = section.getAttribute("id");
-      }
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 60; // Adjust for sticky header
+    const sectionHeight = section.offsetHeight;
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute("id");
+    }
   });
 
-  navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${currentSection}`) {
-          link.classList.add("active");
-      }
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
+  });
+});
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    const targetId = this.getAttribute('href').substring(1); // Get target section ID
+    const targetSection = document.getElementById(targetId);
+
+    // Scroll to the section with an offset for the sticky header
+    const headerOffset = 70; // Adjust based on your header's height
+    const elementPosition = targetSection.offsetTop;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth' // Smooth scrolling
+    });
   });
 });
 
