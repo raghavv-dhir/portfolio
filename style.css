@@ -370,7 +370,7 @@ body {
   margin: 20px auto; /* Center the section horizontally */
   padding: 30px 15px; /* Adjust padding for smaller screens */
   width: 90%; /* Ensure the section stays within the viewport */
-  max-width: 800px; /* Limit the maximum width */
+  max-width: 550px; /* Limit the maximum width */
   box-sizing: border-box; /* Include padding in width calculation */
 }
 
@@ -386,8 +386,8 @@ body {
 
 @media (max-width: 600px) {
   .hero {
-    width: calc(100% - 20px); /* Add 10px space on both sides */
-    padding: 30px 10px; /* Reduce padding further for smaller screens */
+      margin: 20px 10px; /* Add space on the sides */
+      padding: 30px 15px; /* Reduce padding for better fit */
   }
 }
 
