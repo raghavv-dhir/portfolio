@@ -1,12 +1,21 @@
 window.onload = () => {
   const spinner = document.getElementById("loading-spinner");
-  spinner.style.display = "none";
+  spinner.classList.add("hidden");
 };
 
 // Smooth Scrolling to Sections
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  }
+  const targetSection = document.getElementById(id);
+  const headerOffset = document.querySelector('.header').offsetHeight; // Get the height of the header
+  const elementPosition = targetSection.offsetTop;
+  const offsetPosition = elementPosition - headerOffset;
+
+  window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth' // Smooth scrolling effect
+  });
+}
+
   
   // Placeholder functions for button actions
   function seeResume() {
@@ -35,6 +44,12 @@ document.addEventListener("scroll", function() {
       header.style.backgroundColor = "rgba(31, 34, 51, 1)";
   }
 });
+
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+}
+
 // Highlight the active section in the navbar
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");

@@ -45,6 +45,13 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-spinner.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .spinner {
@@ -144,6 +151,11 @@
   justify-content: center;
 }
 
+.container {
+  margin: 50px auto; /* Increased vertical spacing */
+}
+
+
 .container h2 {
   font-size: 1.5rem;
   color: #FFFFFF;
@@ -218,16 +230,16 @@
 
 
 .support-section {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-  border-radius: 15px; /* Smooth corners */
-  padding: 40px; /* Spacing inside the section */
-  margin: 20px; /* Center the section */
-  max-width: 600px; /* Limit width for better design */
+  margin: 20px auto; /* Center horizontally */
+  max-width: 600px;
+  padding: 40px;
   text-align: center;
-  color: #FFFFFF; /* Text color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -322,7 +334,7 @@
     color: #B0BEC5;                 
     font-size: 1.2rem;
     margin: 0 10px;
-    transition: color 0.3s;
+    transition: transform 0.3s ease;
   }
   
   .social-icons a:hover {
@@ -348,6 +360,19 @@ body {
 .hero {
   text-align: center;
   margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Glassmorphic blur effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  padding: 50px 20px;
+  border-radius: 15px; /* Smooth corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  color: #FFFFFF; /* Text color to ensure contrast */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero:hover {
+  transform: translateY(-3px); /* Gentle lift effect */
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
 }
 
 .hero h1 {
@@ -429,7 +454,7 @@ p {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.5); /* Subtle glow */
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
 }
 
 
@@ -455,8 +480,8 @@ p {
 }
 
 .skill:hover {
-  transform: translateY(-3px); /* Gentle lift effect */
-  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
+  transform: scale(1.1);
+    background: rgba(108, 99, 255, 0.3);
 }
 
 .skill i {
@@ -660,3 +685,12 @@ p {
       padding: 10px 20px;
     }
   }
+
+  @media (max-width: 600px) {
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
