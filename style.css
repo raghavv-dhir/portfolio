@@ -360,35 +360,15 @@ body {
 
 .hero {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Glassmorphic blur effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-  border-radius: 15px; /* Smooth corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   color: #FFFFFF; /* Text color to ensure contrast */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: 20px auto; /* Center the section horizontally */
   padding: 30px 15px; /* Adjust padding for smaller screens */
-  width: 90%; /* Ensure the section stays within the viewport */
-  max-width: 550px; /* Limit the maximum width */
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.hero:hover {
-  transform: translateY(-3px); /* Gentle lift effect */
-  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2); /* Subtle glow */
+  max-width: 800px; /* Limit the maximum width */
 }
 
 .hero h1 {
   font-size: 2.5rem;
   line-height: 1.2;
-}
-
-@media (max-width: 600px) {
-  .hero {
-      margin: 20px 10px; /* Add space on the sides */
-      padding: 30px 15px; /* Reduce padding for better fit */
-  }
 }
 
 h1, h2 {
