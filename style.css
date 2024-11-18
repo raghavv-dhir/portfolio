@@ -417,21 +417,22 @@ p {
 
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
-  backdrop-filter: blur(10px); /* Frosted glass effect */
   padding: 20px;
-  border-radius: 8px;
   margin: 15px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #D1D1D1;
   overflow: hidden; /* Ensure image does not overflow */
   position: relative; /* Required for child image positioning */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial shadow */
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project p {
   font-size: 1.1rem; /* Slightly larger font size for better readability */
-  color: #EDEDED; /* Subtle text color */
+  color: #FFFFFF; /* Subtle text color */
   line-height: 1.7; /* Improved line spacing */
   margin: 0; /* Remove default margin */
 }
@@ -447,7 +448,7 @@ p {
 }
 
 .project-card h3 {
-  color: #E0E0E0;
+  color: #FFFFFF;
   font-weight: 500;
   margin-bottom: 20px;
 }
